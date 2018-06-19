@@ -1,0 +1,13 @@
+
+.block{
+  height: 50px;
+
+  &__element{
+    width: 50px;
+    height: 100%;
+
+    &_modify{
+      background: red;
+    }
+  }
+}

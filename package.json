@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "babel src -d dist --presets env",
-    "watch": "babel src -d dist --presets env -w"
+    "js": "babel src -d dist --presets env",
+    "js:watch": "babel src -d dist --presets env -w",
+    "css": "node-sass src/styles -o dist/styles",
+    "css:watch": "npm run css && node-sass src/styles -wo dist/styles",
+    "start": "npm run js:watch | npm run css:watch"
   },
   "author": "",
   "license": "ISC",
@@ -13,5 +16,8 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0"
+  },
+  "dependencies": {
+    "node-sass": "^4.9.0"
   }
 }
